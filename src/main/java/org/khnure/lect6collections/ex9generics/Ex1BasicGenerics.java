@@ -9,6 +9,7 @@ public class Ex1BasicGenerics {
         List<String> stringList = new ArrayList<>();
         stringList.add("Hello"); // Додаємо рядок до списку
         stringList.add("World");
+//        stringList.add(1);
 
         // Access and print elements
         for (String str : stringList) {
