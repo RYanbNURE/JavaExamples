@@ -10,5 +10,7 @@ public class Main {
         // Виклик методу makeSound() для кожного з об'єктів
         dog.makeSound(); // Виведе: Woof!
         cat.makeSound(); // Виведе: Meow!
+
+        Animal gorilla = new Gorilla();
     }
 }

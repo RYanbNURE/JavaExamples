@@ -17,4 +17,9 @@ public class Book implements Printable {
     public void print() {
         System.out.println("Book: " + title + " by " + author);
     }
+
+//    @Override
+    public void printBook() {
+        System.out.println("Book is printed");
+    }
 }

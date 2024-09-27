@@ -13,6 +13,20 @@ public class Main {
         // Створення екземпляру PersonRecord з адресою
         PersonRecord person2 = new PersonRecord("John Doe", 30, address2);
         System.out.println(person2);
+
+        Student a = new Student("A", 20, "PM-1");
+        StudentRecord b = new StudentRecord("B", 21, "PM-2");
+        StudentRecord c = new StudentRecord("B", 21, "PM-2");
+        System.out.println(b.age());
+        System.out.println(b.name());
+        System.out.println(b.group());
+        System.out.println(b.toString());
+
+        System.out.println(b == c);
+        System.out.println(b.equals(c));
+
+        System.out.println(b.hashCode());
+        System.out.println(c.hashCode());
     }
 }
 

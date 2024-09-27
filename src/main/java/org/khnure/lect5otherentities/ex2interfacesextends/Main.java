@@ -8,7 +8,12 @@ public class Main {
 
         // Використання методів для руху та польоту
         moveVehicle(car);
-        flyVehicle(bird);
+        flyFlyable(bird);
+
+
+
+        moveVehicle(bird);
+//        flyFlyable(car);
     }
 
     // Метод для пересування транспортного засобу, що може рухатися
@@ -17,7 +22,7 @@ public class Main {
     }
 
     // Метод для польоту тварини, що може літати
-    public static void flyVehicle(Flyable flyable) {
+    public static void flyFlyable(Flyable flyable) {
         flyable.fly();
     }
 }

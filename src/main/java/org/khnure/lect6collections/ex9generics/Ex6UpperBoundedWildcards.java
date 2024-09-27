@@ -38,7 +38,6 @@ public class Ex6UpperBoundedWildcards {
     public static void main(String[] args) {
         List<Integer> intList = Arrays.asList(10, 20, 30);
         List<Double> doubleList = Arrays.asList(10.5, 20.5, 30.5);
-        List<Long> longList = Arrays.asList(10l);
 
         System.out.println("Sum of intList: " + sum(intList)); // Друкуємо суму списку Integer
         System.out.println("Sum of doubleList: " + sum(doubleList)); // Друкуємо суму списку Double
