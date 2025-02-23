@@ -6,7 +6,8 @@ import java.util.Optional;
 public class OptionalDemo3 {
     public static void main(String[] args) {
         // Створення Optional зі значенням
-        Optional<String> optional = Optional.of("Hello, World!");
+        Optional<String> optional = Optional.ofNullable(null);
+//        Optional<String> optional = Optional.of("Hello, World!");
 
         // Використання методу orElse для надання альтернативного значення
         String value = optional.orElse("Default Value");

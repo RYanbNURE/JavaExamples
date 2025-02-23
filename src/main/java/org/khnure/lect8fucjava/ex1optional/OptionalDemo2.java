@@ -10,6 +10,8 @@ public class OptionalDemo2 {
         Optional<String> optional = Optional.empty();
 
         // Перевірка, чи присутнє значення, та обробка відсутності
+        optional.get().length();
+
         if (optional.isPresent()) {
             String value = optional.get();
             System.out.println("Значення: " + value);

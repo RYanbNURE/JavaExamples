@@ -3,6 +3,7 @@ package org.khnure.lect6collections.ex1arraylists;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,8 +21,21 @@ public class Main {
             System.out.println(student); // автоматично викликає toString() метод рекорду
         }
 
+        students.get(1);
+
+//        students.sort(null);
+//        Collections.sort(students);
+
+        System.out.println("\nВідсортований список студентів за ім ям:");
+        for (Student student : students) {
+            System.out.println(student);
+        }
+
+
         // Сортування списку студентів за віком
         Collections.sort(students, (s1, s2) -> Integer.compare(s1.age(), s2.age()));
+//        Collections.sort(students);
+
 
         // Виведення відсортованого списку студентів до консолі
         System.out.println("\nВідсортований список студентів за віком:");
@@ -31,10 +45,15 @@ public class Main {
 
         // Пошук студента за іменем
         String searchName = "Марія Сидорова";
+
+
+
         Student foundStudent = students.stream()
                 .filter(s -> s.name().equals(searchName))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("Студент не знайдений"));
+
+        System.out.println("Is student found? " + students.contains(foundStudent));
 
         // Виведення знайденого студента до консолі
         System.out.println("\nЗнайдений студент: " + foundStudent);

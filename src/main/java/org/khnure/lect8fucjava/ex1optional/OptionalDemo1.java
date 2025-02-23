@@ -5,7 +5,9 @@ import java.util.Optional;
 public class OptionalDemo1 {
     public static void main(String[] args) {
         // Створення Optional зі значенням
-        Optional<String> optional = Optional.of("Hello, World!");
+//        Optional<String> optional = Optional.of("Hello, World!");
+//        Optional<String> optional = Optional.ofNullable(null);
+        Optional<String> optional = Optional.ofNullable("Hello, World!");
 
         // Перевірка, чи присутнє значення
         if (optional.isPresent()) {

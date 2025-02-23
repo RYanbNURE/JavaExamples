@@ -6,7 +6,8 @@ public class OptionalDemo4 {
     public static void main(String[] args) {
         // Створення вкладених Optional
         Optional<String> optional1 = Optional.of("Hello");
-        Optional<String> optional2 = Optional.of("World");
+//        Optional<String> optional2 = Optional.of("World");
+        Optional<String> optional2 = Optional.empty();
 
         // Ланцюжок операцій з Optional
         String result = optional1.flatMap(s -> optional2.map(s::concat))

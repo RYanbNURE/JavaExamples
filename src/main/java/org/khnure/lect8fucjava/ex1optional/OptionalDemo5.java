@@ -15,8 +15,8 @@ public class OptionalDemo5 {
 
     public static void main(String[] args) {
         // Виклик методу, який повертає Optional<String>
-        Optional<String> result = findValue(4);
-        result.ifPresent(System.out::println);
+        Optional<String> result = findValue(3);
+        result.or(()-> Optional.of("Hello world")).ifPresent(System.out::println);
     }
 
 }
