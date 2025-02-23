@@ -1,21 +1,43 @@
 package org.khnure.lect5otherentities.ex1interfaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Головний клас для демонстрації використання інтерфейсів в Java
 public class Main {
 
     public static void main(String[] args) {
         // Створення об'єктів, які реалізують інтерфейс Printable
-        Printable book = new Book("1984", "George Orwell");
-        Printable magazine = new Magazine("National Geographic", 30);
+        Book book = new Book("1984", "George Orwell");
+        Magazine magazine = new Magazine("National Geographic", 30);
 
         // Виклик методів через інтерфейс Printable
         printInfo(book);
         printInfo(magazine);
+
+        List<Printable> printables = new ArrayList<>();
+        printables.add(magazine);
+        printables.add(book);
+
+        Printable extractedBook = printables.get(0);
+        if (extractedBook.getClass().equals(Book.class)) {
+             ((Book) extractedBook).printBook();
+        }
     }
 
     // Метод для друку інформації про об'єкти, які реалізують інтерфейс Printable
     public static void printInfo(Printable printable) {
         printable.print(); // Викликає метод print() визначений у інтерфейсі Printable
+    }
+
+    public static Printable getPrintableFromFactory(String printable) {
+        if ("Magazine".equals(printable)) {
+            return new Magazine("test", 2);
+        }
+        if ("Book".equals(printable)) {
+            return new Book("test", "test");
+        }
+        throw new RuntimeException();
     }
 }
 

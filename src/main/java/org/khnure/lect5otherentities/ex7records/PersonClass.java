@@ -1,6 +1,7 @@
 package org.khnure.lect5otherentities.ex7records;
 
 public class PersonClass {
+
     private final String name;
     private final int age;
     private final Address address;  // Вкладений клас Address

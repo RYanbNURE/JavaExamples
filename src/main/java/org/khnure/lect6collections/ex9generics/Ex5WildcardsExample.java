@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Ex5WildcardsExample {
     public static void printList(List<?> list) {
+        String listFirst =  list.getFirst().toString();
         for (Object elem : list) {
             System.out.print(elem + " "); // Друкуємо елемент списку
         }
