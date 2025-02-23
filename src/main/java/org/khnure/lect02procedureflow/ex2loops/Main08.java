@@ -1,4 +1,4 @@
-package org.khnure.lect02branchingloops.ex2loops;
+package org.khnure.lect02procedureflow.ex2loops;
 
 public class Main08 {
     public static void main(String[] args) {

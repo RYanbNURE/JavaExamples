@@ -1,4 +1,4 @@
-package org.khnure.lect02branchingloops.ex1branching;
+package org.khnure.lect02procedureflow.ex1branching;
 
 public class Main04 {
     public static void main(String[] args) {
