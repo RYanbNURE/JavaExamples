@@ -1,0 +1,11 @@
+package org.khnure.lect6acollectionsbasic.ex1list.ex2linkedlist;
+
+// Створення рекорду для представлення студента
+public record Student(String name, int age) {
+    // Конструктор рекорду
+    public Student {
+        if (age < 0 || age > 120) {
+            throw new IllegalArgumentException("Invalid age value");
+        }
+    }
+}
